@@ -1,0 +1,7 @@
+part1:
+	kotlinc *.kt -include-runtime -d app.jar && java -jar app.jar part1 input.txt
+
+part2:
+	kotlinc *.kt -include-runtime -d app.jar && java -jar app.jar part2 input.txt
+
+.PHONY: part1 part2

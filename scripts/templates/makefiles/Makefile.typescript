@@ -1,0 +1,7 @@
+part1:
+	npm install > /dev/null && npm run start:part1 -- input.txt
+
+part2:
+	npm install > /dev/null && npm run start:part2 -- input.txt
+
+.PHONY: part1 part2

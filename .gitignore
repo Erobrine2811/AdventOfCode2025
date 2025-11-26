@@ -1,0 +1,37 @@
+# Python virtual environment
+venv/
+__pycache__/
+
+# Compiled language outputs
+*.o
+*.class
+*.jar
+*.exe
+*.bin
+# C++ generated executables (if not handled by *.bin)
+coders/*/day_*/part1
+coders/*/day_*/part2
+
+# Node.js / TypeScript
+node_modules/
+dist/
+
+# Rust
+Cargo.lock
+target/
+
+# Go
+go.sum
+
+# Swift build artifacts
+.build/
+
+# IDE files (common)
+.idea/
+.vscode/
+*.iml
+
+# OS generated files
+.DS_Store
+.env
+.env.*

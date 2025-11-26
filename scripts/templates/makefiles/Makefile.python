@@ -1,0 +1,9 @@
+PYTHON?=python
+
+part1:
+	$(PYTHON) part1.py input.txt
+
+part2:
+	$(PYTHON) part2.py input.txt
+
+.PHONY: part1 part2
