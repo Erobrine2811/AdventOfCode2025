@@ -1,7 +1,5 @@
 # 🎄 Advent of Code 2025 - A Festive Coding Collaboration! 🎄
 
-![Festive Banner](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGNvMXZkN3R0c2NpbjB3d2ZtaWJ0bjVwZHM1Mm1veXp2aHVpZHU5eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26tOZlKO9QxXcH0gE/giphy.gif)
-
 ## ✨ Greetings, Fellow Coder, and Welcome to the Festivities! ✨
 
 We're so excited you're joining us for this year's Advent of Code! This repository is a collaborative space for us to share our solutions, learn from each other, and celebrate the joy of coding during this festive season. Whether you're a seasoned pro or just starting your coding journey, we're thrilled to have you.
@@ -127,4 +125,4 @@ This is a collaborative project, and we welcome contributions! Here's how you ca
 
 ## ❄️ Happy Coding, and May Your Solutions Be Merry and Bright! ❄️
 
-> Created by gemini
+> Created by gemini :P
