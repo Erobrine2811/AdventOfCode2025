@@ -109,7 +109,7 @@ make analyze DAY=<day>
 **Example:**
 
 ```bash
-make analyze DAYS="1-3" CODERS="python,go" PART=1
+make analyze DAYS="1-3" CODERS="johnthegoat,hacker" PART=1
 ```
 This command will analyze Part 1 solutions for the `python` and `go` coders for Days 1, 2, and 3.
 
@@ -117,11 +117,29 @@ This command will analyze Part 1 solutions for the `python` and `go` coders for 
 
 ## 🌟 Contributing
 
-This is a collaborative project, and we welcome contributions! Here's how you can help:
+We enthusiastically welcome contributions from everyone! Whether you're fixing a bug, adding a new feature, or improving documentation, your help is invaluable. By contributing, you'll not only help make this project better but also learn from a diverse community of coders.
 
-*   **Add a New Language:** If you'd like to add support for a new language, please open a pull request with a template, a `Makefile` for the analyzer, and the necessary updates to `scripts/new_coder.py` and `scripts/analyze.py`.
-*   **Improve a Template:** Have a better way to structure a solution? We'd love to see it!
-*   **Enhance the Analysis:** Feel free to improve the `analyze.py` script to provide even more insightful metrics.
+### How You Can Contribute
+
+You can directly push your changes to the `main` branch. However, please be mindful of the following:
+
+1.  **Direct Pushes to `main`:** You are allowed to push directly to the `main` branch. However, please exercise extreme caution and ensure your changes are thoroughly tested locally before pushing.
+2.  **Respect Others' Code:** It is **critically important** that you **do not modify other contributors' solutions or files outside of your own coder directory (`coders/<your_name>/`).** If you find an issue or have an improvement for someone else's code, please communicate with them directly or open an issue to discuss it.
+3.  **Running Analysis on Your Branch:**
+    *   To run `make analyze` effectively on your feature branch, you may need to ensure it's up-to-date with the `main` branch. You can do this by running `git pull origin main` on your branch (and resolving any conflicts) before running `make analyze`.
+
+### What You Can Contribute
+
+Here are some specific ways you can help:
+
+*   **Add New Language Support:** Want to see your favorite language here? Add a new template, a `Makefile` for the analyzer, and updates to `scripts/new_coder.py` and `scripts/analyze.py`.
+*   **Improve Existing Templates/Solutions:** Found a more efficient algorithm? Have a cleaner code style? Share your improvements!
+*   **Enhance Analysis Tools:** Help us make `analyze.py` even better by suggesting or implementing new metrics, visualizations, or features.
+*   **Bug Fixes:** Found a bug? We appreciate your help in squashing them!
+*   **Documentation:** Clear and comprehensive documentation makes everyone's life easier.
+*   **Refactoring:** Help improve the codebase's readability and maintainability.
+
+---
 
 ## ❄️ Happy Coding, and May Your Solutions Be Merry and Bright! ❄️
 
