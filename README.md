@@ -121,12 +121,38 @@ We enthusiastically welcome contributions from everyone! Whether you're fixing a
 
 ### How You Can Contribute
 
-You can directly push your changes to the `main` branch. However, please be mindful of the following:
+We follow a standard Forking Workflow to manage contributions and ensure code quality. Please follow these steps:
 
-1.  **Direct Pushes to `main`:** You are allowed to push directly to the `main` branch. However, please exercise extreme caution and ensure your changes are thoroughly tested locally before pushing.
+1.  **Fork the Repository:** Start by forking this repository to your GitHub account. This creates your personal copy where you can make changes.
+2.  **Clone Your Fork:** Clone your forked repository to your local machine:
+    ```bash
+    git clone https://github.com/YOUR_GITHUB_USERNAME/AdventOfCode2025.git
+    cd AdventOfCode2025
+    ```
+3.  **Create a New Branch:** Always create a new branch for completing a day or days:
+    ```bash
+    git checkout -b feature/your-feature-name
+    ```
+4.  **Make Your Changes:** Implement your solution, fix bugs, or add new features in your new branch. Remember to adhere to the project's conventions.
+5.  **Commit Your Changes:** Commit your changes with clear and descriptive commit messages:
+    ```bash
+    git add .
+    git commit -m "feat: Add solution for Day X Part Y"
+    ```
+6.  **Push to Your Fork:** Push your local branch to your forked repository on GitHub:
+    ```bash
+    git push origin feature/your-feature-name
+    ```
+7.  **Create a Pull Request (PR):** Go to the original repository on GitHub, and you'll see an option to create a new Pull Request from your pushed branch.
+    *   Ensure your PR targets the `main` branch of this repository.
+    *   Provide a clear title and description for your PR, explaining the changes you've made.
+    *   Your PR will be reviewed, and once approved, it will be merged into `main`.
+
+Please ensure your changes are thoroughly tested locally before submitting a pull request.
+
 2.  **Respect Others' Code:** It is **critically important** that you **do not modify other contributors' solutions or files outside of your own coder directory (`coders/<your_name>/`).** If you find an issue or have an improvement for someone else's code, please communicate with them directly or open an issue to discuss it.
 3.  **Running Analysis on Your Branch:**
-    *   To run `make analyze` effectively on your feature branch, you may need to ensure it's up-to-date with the `main` branch. You can do this by running `git pull origin main` on your branch (and resolving any conflicts) before running `make analyze`.
+    *   To run `make analyze` effectively on your feature branch, you may need to ensure it's up-to-date with the `main` branch. You can do this by running `git pull origin main` on your branch (and resolving any conflicts) before running `make analyze).
 
 ### What You Can Contribute
 
