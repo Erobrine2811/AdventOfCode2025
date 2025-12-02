@@ -13,8 +13,38 @@ where
 }
 
 fn solve(input: &[String]) -> String {
-    // Your solution for part 1 goes here
-    "solution for part 1".to_string()
+    let mut ranges = Vec::new();
+    for line in input {
+        let input_by_comma = line.split(",");
+
+        for range in input_by_comma {
+            let Some((part1, part2)) = range.split_once("-") else { continue;};
+            ranges.push([part1.parse::<i64>().unwrap(), part2.parse::<i64>().unwrap()]);
+        }
+    }
+
+    let mut count: i64 = 0;
+
+    for range in ranges {
+        for num in range[0]..=range[1] {
+            if check_invalidity(num) {
+                count += num;
+            }
+        }
+    }
+
+    return count.to_string();
+}
+
+fn check_invalidity(num: i64) -> bool {
+    let numAsStr  = num.to_string();
+    let numAsStrLen  = numAsStr.len();
+    if numAsStrLen % 2 != 0 { return false; }
+    let half = numAsStrLen / 2;
+    let substring = &numAsStr[..half];
+    let otherSubstring = &numAsStr[half..];
+    if (substring == otherSubstring) { return true; }
+    return false;
 }
 
 fn main() {
