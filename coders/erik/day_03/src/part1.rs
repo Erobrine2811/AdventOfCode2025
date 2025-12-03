@@ -13,8 +13,45 @@ where
 }
 
 fn solve(input: &[String]) -> String {
-    // Your solution for part 1 goes here
-    "solution for part 1".to_string()
+    let mut count = 0;
+    'outer: for line in input {
+        let lineLen = line.len();
+        let substring = &line[..(lineLen as usize)-1];
+
+        let mut index = 0;
+        let mut largest = 0;
+        let mut largestIndex = 0;
+
+        'inner: for char in substring.chars() {
+            let asNum  = char.to_digit(10).unwrap();
+            if asNum > largest {
+                largest = asNum;
+                largestIndex = index;
+            }
+
+            if largest == 9 {
+                break 'inner;
+            }
+
+            index+=1;
+        }
+
+        let newSubstring = &line[largestIndex+1..];
+
+        let mut secondLargest = 0;
+        'inner: for char in newSubstring.chars() {
+            let asNum  = char.to_digit(10).unwrap();
+
+            if asNum > secondLargest {
+                secondLargest = asNum;
+            }
+        }
+
+        println!("{}", (10 * largest) + secondLargest);
+        count = count + (10 * largest) + secondLargest;
+
+    }
+    return count.to_string();
 }
 
 fn main() {
