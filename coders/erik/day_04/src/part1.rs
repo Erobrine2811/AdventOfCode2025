@@ -12,9 +12,75 @@ where
     io::BufReader::new(file).lines().collect()
 }
 
+fn hasFourNeighbours(x: usize, y: usize, grid: Vec<String>) -> bool {
+    let char = grid[y].as_bytes()[x] as char;
+
+    if char != '@' { return false; }
+
+    let height = grid.len();
+    let width = grid[0].len();
+
+    let mut cnt = 0;
+
+    // Up
+    if y > 0 {
+        if grid[y-1].as_bytes()[x] as char == '@' { cnt += 1; }
+    }
+    // Left
+    if x > 0 {
+        if grid[y].as_bytes()[x-1] as char == '@' { cnt += 1; }
+    }
+    // Left Up
+    if x > 0 && y > 0 {
+        if grid[y-1].as_bytes()[x-1] as char == '@' { cnt += 1; }
+    }
+
+    // Right Down
+    if x < width - 1 && y < height - 1 {
+        if grid[y+1].as_bytes()[x+1] as char == '@' { cnt += 1; }
+    }
+    // Right
+    if x < width - 1 {
+        if grid[y].as_bytes()[x+1] as char == '@' { cnt += 1; }
+    }
+    // Down
+    if y < height - 1 {
+        if grid[y+1].as_bytes()[x] as char == '@' { cnt += 1; }
+    }
+
+    // Left Down
+    if y < height - 1 && x > 0 {
+        if grid[y+1].as_bytes()[x-1] as char == '@' { cnt += 1; }
+    }
+
+    // Right Up
+    if y > 0 && x < width - 1 {
+        if grid[y-1].as_bytes()[x+1] as char == '@' { cnt += 1; }
+    }
+
+    return cnt < 4;
+}
+
 fn solve(input: &[String]) -> String {
-    // Your solution for part 1 goes here
-    "solution for part 1".to_string()
+    let mut grid: Vec<String> = Vec::new();
+    for line in input{
+        grid.push(line.to_string());
+    }
+
+    let height = grid.len();
+    let width = grid[0].len();
+    
+    let mut count = 0;
+
+    for y in 0..height {
+        for x in 0..width {
+            if hasFourNeighbours(x, y, grid.clone()) {
+                count += 1;
+            }
+        }
+    }
+
+    return count.to_string()
 }
 
 fn main() {
